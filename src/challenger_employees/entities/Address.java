@@ -6,6 +6,12 @@ public class Address {
 	private String prhone;
 	
 	
+	
+	
+	public Address() {
+		
+	}
+	
 	public Address(String email, String prhone) {
 		
 		this.email = email;
@@ -33,10 +39,6 @@ public class Address {
 	}
 
 
-	@Override
-	public String toString() {
-		return "Address [email=" + email + ", prhone=" + prhone + "]";
-	}
 	
 	
 

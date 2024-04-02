@@ -8,6 +8,10 @@ public class Employee {
 	
 	
 	
+	public Employee() {
+		
+	}
+	
 	public Employee(String name, double salary) {
 		
 		this.name = name;
@@ -45,10 +49,7 @@ public class Employee {
 
 
 
-	@Override
-	public String toString() {
-		return "Employee [name=" + name + ", salary=" + salary + "]";
-	}
+	
 	
 	
 

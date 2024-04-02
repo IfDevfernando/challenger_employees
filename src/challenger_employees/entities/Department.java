@@ -10,12 +10,18 @@ public class Department {
 	
 	List<Employee> employees = new ArrayList<>();
 	
+	private Address address;
 	
 	
-	public Department(String name, int payDay) {
+	
+	
+
+	public Department(String name, int payDay,Address address,List<Employee> employees) {
 		
+		this.address = address;
 		this.name = name;
 		this.payDay = payDay;
+		this.employees = employees;
 	}
 
 
@@ -42,6 +48,22 @@ public class Department {
 		this.payDay = payDay;
 	}
 	
+	public Address getAddress() {
+		return address;
+	}
+
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+	
 	public void addEmployee(Employee employee) {
 		
 		employees.add(employee);
@@ -50,9 +72,21 @@ public class Department {
 	public void removeEmployee(Employee employee) {
 		employees.remove(employee);
 	}
+	
 	public double payroll() {
-		return 0.0;
+		double salaryTotal = 0.0;
+		
+		for(Employee em: employees) {
+			salaryTotal += em.getSalary();
+		}
+		
+		return salaryTotal;
 	}
+
+
+
+	
+
 	
 
 }
